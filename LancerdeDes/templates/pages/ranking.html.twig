@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title 'Classement' %}
+
+{% block body %}
+    <div class="body-content">
+        <h1> Classement </h1>
+        <p> Vous trouverez ici le classement des 20 joueurs ayant gagné le plus de match. </p>
+
+        <div class = "table-conainer">
+            <table class="tableau">
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Pseudo</th>
+                    <th>Nombre de match gagné</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in bestPlayer %} 
+                    <tr>
+                        <td> {{player.rang}} </td>
+                        <td> {{player.pseudo}} </td>
+                        <td> {{player.nombreMatchGagne}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+                
+            </table> 
+        </div>
+    </div>
+    
+{% endblock %}

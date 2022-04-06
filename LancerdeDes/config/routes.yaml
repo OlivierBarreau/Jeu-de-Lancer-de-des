@@ -1,0 +1,32 @@
+# config/routes/annotations.yaml
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+rank:
+    path: /ranking
+    controller: App\Controller\RankingController::index
+
+game:
+    path: /game
+    controller: App\Controller\GameController::index
+
+lancerJoueur1:
+    path: /game/lancerJoueur1
+    controller: App\Controller\GameController::lancerJoueur1
+
+lancerJoueur2:
+    path: /game/lancerJoueur2
+    controller: App\Controller\GameController::lancerJoueur2
+
+vue:
+    path: /vue
+    controller: App\Controller\HomeController::createView
